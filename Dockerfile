@@ -28,7 +28,7 @@ RUN apt-get install -y oracle-java8-set-default
 RUN apt-get update && apt-get install -y --no-install-recommends lxde
 
 ENV ECLIPSE eclipse-jee-luna-SR2-linux-gtk-x86_64.tar.gz
-RUN curl -O http://download.eclipse.org/technology/epp/downloads/release/luna/SR1a/"$ECLIPSE"
+RUN curl -O http://download.eclipse.org/technology/epp/downloads/release/luna/SR1a/eclipse-jee-luna-SR2-linux-gtk-x86_64.tar.gz
 RUN tar -vxzf $ECLIPSE -C /usr/local/
 COPY org.eclipse.ui.ide.prefs /usr/local/eclipse/configuration/.settings/org.eclipse.ui.ide.prefs
 
